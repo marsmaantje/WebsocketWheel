@@ -61,20 +61,6 @@ namespace SteeringWheel_Interface
             wssv.AddWebSocketService<websocketWheel>("/");
             wssv.Start();
 
-            /*
-            //start timer for websocket
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Tick += new EventHandler(serverBroadcast);
-            timer.Interval = TimeSpan.FromSeconds(1 / 144f);
-            timer.Start();
-
-            //start timer for haptics updating
-            timer = new DispatcherTimer();
-            timer.Tick += new EventHandler(updateForceFeedback);
-            timer.Interval = TimeSpan.FromSeconds(1 / 500f);
-            timer.Start();
-            */
-
             //start Timer for data polling
             DispatcherTimer timer = new DispatcherTimer();
             timer.Tick += new EventHandler(Update);
